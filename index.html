@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Valentine</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Question 1 -->
+        <div id="q1" class="question">
+            <p>Will you be my Valentine?</strong></p>
+            <div class="buttons">
+                <button onclick="moveToQuestion(1, 2)" id="yes-button">Yes</button>
+                <button id="no-button" onclick="moveToQuestion(1, -1)">No</button>
+            </div>
+        </div>
+
+        <!-- Question 2 (Yes branch from Q1) -->
+        <div id="q2" class="question hidden">
+            <p>Did you mean "yes" to buying a backpack?</strong></p>
+            <div class="buttons">
+                <button onclick="moveToQuestion(2, 3)" id="yes-button">Yes</button>
+                <button id="no-button" onclick="moveToQuestion(2, 1)">No</button>
+            </div>
+        </div>
+
+        <!-- Question 3 (Yes branch from Q2) -->
+        <div id="q3" class="question hidden">
+            <p>Would you like to buy another?</strong></p>
+            <div class="buttons">
+                <button onclick="moveToQuestion(3, 3)" id="yes-button">Yes</button>
+                <button id="no-button" onclick="moveToQuestion(3, 1)">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
