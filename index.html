@@ -15,29 +15,36 @@
     <div class="container">
         <!-- Question 1 -->
         <div id="q1" class="question">
-            <p>Will you be my Valentine?</strong></p>
+            <div class="img-container">
+                <img class="main-img" src="img/heart-eyes.png" alt="Jess with heart eyes">
+            </div>
+            <p class="header-text">Will you be my Valentine?</p>
             <div class="buttons">
-                <button onclick="moveToQuestion(1, 2)" id="yes-button">Yes</button>
-                <button id="no-button" onclick="moveToQuestion(1, -1)">No</button>
+                <button onclick="moveToQuestion(1, 2)" class="yes-button">Yes</button>
+                <button class="no-button" onclick="moveToQuestion(1, -1)">No</button>
             </div>
         </div>
 
         <!-- Question 2 (Yes branch from Q1) -->
         <div id="q2" class="question hidden">
-            <p>Did you mean "yes" to buying a backpack?</strong></p>
+            <p class="header-text">Did you mean "yes" to buying a backpack?</p>
             <div class="buttons">
-                <button onclick="moveToQuestion(2, 3)" id="yes-button">Yes</button>
-                <button id="no-button" onclick="moveToQuestion(2, 1)">No</button>
+                <button onclick="moveToQuestion(2, 3)" class="yes-button">Yes</button>
+                <button class="no-button" onclick="moveToQuestion(2, 1)">No</button>
             </div>
         </div>
 
         <!-- Question 3 (Yes branch from Q2) -->
         <div id="q3" class="question hidden">
-            <p>Would you like to buy another?</strong></p>
+            <p class="header-text">Would you like to buy another?</p>
             <div class="buttons">
-                <button onclick="moveToQuestion(3, 3)" id="yes-button">Yes</button>
-                <button id="no-button" onclick="moveToQuestion(3, 1)">No</button>
+                <button onclick="moveToQuestion(3, 3)" class="yes-button">Yes</button>
+                <button class="no-button" onclick="moveToQuestion(3, 1)">No</button>
             </div>
+        </div>
+
+        <div class="final hidden">
+            <img class="main-img" src="img/love.png" alt="couple">
         </div>
     </div>
     <script src="script.js"></script>
