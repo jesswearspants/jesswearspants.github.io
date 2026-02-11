@@ -30,7 +30,7 @@
             <p class="header-text">Did you mean "yes" to buying a backpack?</p>
             <div class="buttons">
                 <button onclick="moveToQuestion(2, 3)" class="yes-button">Yes</button>
-                <button class="no-button" onclick="moveToQuestion(2, 1)">No</button>
+                <button class="no-button" onclick="moveToQuestion(2, 4)">No</button>
             </div>
         </div>
 
@@ -39,12 +39,22 @@
             <p class="header-text">Would you like to buy another?</p>
             <div class="buttons">
                 <button onclick="moveToQuestion(3, 3)" class="yes-button">Yes</button>
-                <button class="no-button" onclick="moveToQuestion(3, 1)">No</button>
+                <button class="no-button" onclick="moveToQuestion(3, 4)">No</button>
             </div>
         </div>
 
-        <div class="final hidden">
+        <!-- Question 3 (Yes branch from Q2) -->
+        <div id="q4" class="question hidden">
+            <p class="header-text">Will you please be my Valentine?</p>
+            <div class="buttons">
+                <button onclick="moveToFinalQuestion()" class="yes-button">Yes</button>
+                <button class="no-button" onclick="moveToQuestion(4, -1)">No</button>
+            </div>
+        </div>
+
+        <div id="final-q" class="hidden">
             <img class="main-img" src="img/love.png" alt="couple">
+            <p class="header-text">Yay!</p>
         </div>
     </div>
     <script src="script.js"></script>
