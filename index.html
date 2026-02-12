@@ -16,7 +16,8 @@
         <!-- Question 1 -->
         <div id="q1" class="question">
             <div class="img-container">
-                <img class="main-img" src="img/heart-eyes.png" alt="Jess with heart eyes">
+                <img class="main-img-anim img-anim-top" src="img/heart-eyes.png" alt="Jess with heart eyes">
+                <img class="main-img-anim img-anim-bottom" src="img/heart-eyes-2.png" alt="Jess with heart eyes 2">
             </div>
             <p class="header-text">Will you be my Valentine?</p>
             <div class="buttons">
@@ -26,14 +27,17 @@
                 </button>
                 <button class="no-button" onclick="moveToQuestion(1, 1)">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
-                    <img class="hover-img"  src="img/no-stinky-foot.png" alt=""/>
+                    <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
             </div>
         </div>
 
         <!-- Question 2 (Yes branch from Q1) -->
         <div id="q2" class="question hidden">
-            <p class="header-text">Did you mean "yes" to buying a backpack?</p>
+            <div class="img-container">
+                <img class="main-img img-slide-up" src="img/capy-carl.png" alt="Capy Carl">
+            </div>
+            <p class="header-text">Did you mean ✨yes✨ to buying a backpack?</p>
             <div class="buttons">
                 <button class="yes-button" onclick="moveToQuestion(2, 3)">
                     <img class="init-img" src="img/yes-heart.png" alt=""/>
@@ -41,13 +45,16 @@
                 </button>
                 <button class="no-button" onclick="moveToQuestion(2, 4)">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
-                    <img class="hover-img"  src="img/no-stinky-foot.png" alt=""/>
+                    <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
             </div>
         </div>
 
         <!-- Question 3 (Yes branch from Q2) -->
         <div id="q3" class="question hidden">
+            <div class="img-container">
+                <img class="main-img" src="img/capy-carl.png" alt="Capy Carl">
+            </div>
             <p class="header-text">Would you like to buy another?</p>
             <div class="buttons">
                 <button class="yes-button" onclick="moveToQuestion(3, 3)">
@@ -56,13 +63,17 @@
                 </button>
                 <button class="no-button" onclick="moveToQuestion(3, 4)">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
-                    <img class="hover-img"  src="img/no-stinky-foot.png" alt=""/>
+                    <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
             </div>
         </div>
 
         <!-- Question 3 (Yes branch from Q2) -->
         <div id="q4" class="question hidden">
+            <div class="img-container">
+                <img class="main-img-anim img-anim-top" src="img/heart-eyes.png" alt="Jess with heart eyes">
+                <img class="main-img-anim img-anim-bottom" src="img/heart-eyes-2.png" alt="Jess with heart eyes 2">
+            </div>
             <p class="header-text">Will you please be my Valentine?</p>
             <div class="buttons">
                 <button class="yes-button" onclick="moveToFinalQuestion()">
@@ -71,14 +82,14 @@
                 </button>
                 <button class="no-button" onclick="moveToQuestion(4, 4)">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
-                    <img class="hover-img"  src="img/no-stinky-foot.png" alt=""/>
+                    <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
             </div>
         </div>
 
         <div id="final-q" class="hidden">
-            <img class="main-img" src="img/love.png" alt="couple">
-            <p class="header-text">Yay!</p>
+            <img class="final-img" src="img/valentine-couple.png" alt="couple">
+            <p class="final-header-text">Yay!</p>
         </div>
     </div>
     <script src="script.js"></script>

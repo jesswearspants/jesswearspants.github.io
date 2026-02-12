@@ -16,24 +16,64 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
+  height: 250px;
 }
 
 .main-img {
-  width: 350px;
-  height: auto;
+  width: auto;
+  height: 250px;
 }
-  
+
+.main-img-anim {
+  width: auto;
+  height: 250px;
+  position: absolute;
+  animation: fade 0.5s infinite alternate;
+}
+
+.img-anim-bottom {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.img-slide-up {
+  animation: fadeInUp 1s ease-out forwards;
+} 
+
+@keyframes fadeInUp {
+  0% {
+    /* Start 100% of its own height down and completely transparent */
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  50% {
+    /* Start 100% of its own height down and completely transparent */
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  100% {
+    /* End at its natural position and fully visible */
+    transform: translateY(0); 
+    opacity: 1;
+  }
+}
 
 .header-text {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .buttons {
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .buttons button {
@@ -43,12 +83,12 @@ body {
 }
 
 .buttons button .init-img {
-  width: 175px;
+  width: 220px;
   height: auto;
 }
 
 .buttons button .hover-img {
-  width: 195px;
+  width: 220px;
   height: auto;
   display: none;
 }
@@ -61,4 +101,14 @@ body {
 .buttons button:hover .init-img,
 .buttons button:focus .init-img {
   display: none;
+}
+
+.final-img {
+  width: auto;
+  height: 300px;
+}
+
+.final-header-text {
+  text-align: center;
+  margin-top: -30px;
 }
