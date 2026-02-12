@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <div class="container">
+    <img id="capy-sad" class="transition-img hidden" src="img/capy-sad.png" alt=""/>
+    <div id="question-container">
         <!-- Question 1 -->
         <div id="q1" class="question">
             <div class="img-container">
@@ -43,7 +44,7 @@
                     <img class="init-img" src="img/yes-heart.png" alt=""/>
                     <img class="hover-img"  src="img/yes-heart-hover.png" alt=""/>
                 </button>
-                <button class="no-button" onclick="moveToQuestion(2, 4)">
+                <button class="no-button" onclick="transitionImageToQuestions(2, 4, 'capy-sad')">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
                     <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
@@ -53,7 +54,8 @@
         <!-- Question 3 (Yes branch from Q2) -->
         <div id="q3" class="question hidden">
             <div class="img-container">
-                <img class="main-img" src="img/capy-carl.png" alt="Capy Carl">
+                <img class="main-img-anim img-anim-top" src="img/capy-carl.png" alt="Capy Carl">
+                <img class="main-img-anim img-anim-bottom" src="img/capy-heart-eyes.png" alt="Capy with heart eyes 2">
             </div>
             <p class="header-text">Would you like to buy another?</p>
             <div class="buttons">
@@ -61,7 +63,7 @@
                     <img class="init-img" src="img/yes-heart.png" alt=""/>
                     <img class="hover-img"  src="img/yes-heart-hover.png" alt=""/>
                 </button>
-                <button class="no-button" onclick="moveToQuestion(3, 4)">
+                <button class="no-button" onclick="transitionImageToQuestions(3, 4, 'capy-sad')">
                     <img class="init-img" src="img/no-foot.png" alt=""/>
                     <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
