@@ -40,7 +40,7 @@
             </div>
             <p class="header-text">Did you mean ✨yes✨ to buying a backpack?</p>
             <div class="buttons">
-                <button class="yes-button" onclick="moveToQuestion(2, 3)">
+                <button class="yes-button" onclick="moveToQuestion(2, 3, true)">
                     <img class="init-img" src="img/yes-heart.png" alt=""/>
                     <img class="hover-img"  src="img/yes-heart-hover.png" alt=""/>
                 </button>
@@ -59,7 +59,7 @@
             </div>
             <p class="header-text">Would you like to buy another?</p>
             <div class="buttons">
-                <button class="yes-button" onclick="moveToQuestion(3, 3)">
+                <button class="yes-button" onclick="moveToQuestion(3, 3, true)">
                     <img class="init-img" src="img/yes-heart.png" alt=""/>
                     <img class="hover-img"  src="img/yes-heart-hover.png" alt=""/>
                 </button>
@@ -67,6 +67,10 @@
                     <img class="init-img" src="img/no-foot.png" alt=""/>
                     <img class="hover-img"  src="img/no-foot-hover.png" alt=""/>
                 </button>
+            </div>
+            <div id="backpack-purchase">
+                <p>Number of backpacks: <span id="num-backpacks">0</span></p>
+                <p>Total $ owed: <span id="total-cost">$0</span></p>
             </div>
         </div>
 
