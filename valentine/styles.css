@@ -1,11 +1,14 @@
 body {
-	font-family: 'LXGW WenKai Mono TC', monospace;
-	font-size: 42px;
-	font-weight: 400;
-  align-items: center;
-  justify-content: center;
+  font-family: 'LXGW WenKai Mono TC', monospace;
+  font-size: 42px;
   display: flex;
-  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hidden {
@@ -47,17 +50,14 @@ body {
 
 @keyframes fadeInUp {
   0% {
-    /* Start 100% of its own height down and completely transparent */
     transform: translateX(100%); 
     opacity: 0;
   }
   50% {
-    /* Start 100% of its own height down and completely transparent */
     transform: translateX(100%); 
     opacity: 0;
   }
   100% {
-    /* End at its natural position and fully visible */
     transform: translateY(0); 
     opacity: 1;
   }
@@ -67,6 +67,11 @@ body {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+  /* Add these lines */
+  width: 100%; 
+  max-width: 90vw; /* Keeps text from touching screen edges */
+  word-wrap: break-word;
+  line-height: 1.2; /* Prevents giant letters from overlapping lines */
 }
 
 .buttons {
@@ -144,4 +149,21 @@ body {
 .transition-img .img-container img {
   height: 400px;
   width: auto;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 28px;
+  }
+
+  .buttons button .init-img,
+  .buttons button .hover-img {
+    width: 150px;
+  }
+
+  .transition-img .img-container,
+  .transition-img .img-container img {
+    height: 300px;
+    width: auto;
+  }
 }
