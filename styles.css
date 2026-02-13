@@ -96,6 +96,7 @@ body {
 .buttons button:hover .hover-img,
 .buttons button:focus .hover-img {
   display: inline-block;
+  transform: scale(1.05);
 }
 
 .buttons button:hover .init-img,
@@ -103,14 +104,16 @@ body {
   display: none;
 }
 
-.final-img {
-  width: auto;
-  height: 300px;
+#final-q .img-container,
+#final-q .img-container img {
+  height: 350px;
 }
 
 .final-header-text {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 10;
 }
 
 .transition-img {
@@ -119,11 +122,9 @@ body {
 }
 
 @keyframes shrink {
-  /* Start state: larger size */
   from {
     transform: scale(1);
   }
-  /* End state: normal size */
   to {
     transform: scale(0.25);
   }
@@ -137,4 +138,10 @@ body {
 #backpack-purchase p {
   text-align: center;
   font-size: 20px;
+}
+
+.transition-img .img-container,
+.transition-img .img-container img {
+  height: 600px;
+  width: auto;
 }

@@ -15,22 +15,30 @@ function moveToFinalQuestion() {
   document.getElementById('final-q').classList.remove('hidden');
 }
 
-function transitionImageToQuestions(current_question_number, next_question_number, image_id) {
+function transitionImageToQuestions(current_question_number, next_question_number, image_id, animation) {
   const imageElement = document.getElementById(image_id);
   const durationInMilliseconds = 3000; // 3 seconds
 
   document.getElementById('question-container').classList.add('hidden');
 
-  // Show the image
   imageElement.style.display = 'block';
-  imageElement.style.animation = 'shrink 3s ease-out forwards';
+  imageElement.style.animation = animation;
 
-  // Set a timeout to hide the image after the specified duration
   setTimeout(function() {
       imageElement.style.display = 'none';
       document.getElementById('question-container').classList.remove('hidden');
       moveToQuestion(current_question_number, next_question_number);
   }, durationInMilliseconds);
+}
+
+function shrinkTransitionImageToQuestions(current_question_number, next_question_number, image_id) {
+  const animation = 'shrink 3s ease-out forwards';
+  transitionImageToQuestions(current_question_number, next_question_number, image_id, animation);
+}
+
+function fadeTransitionImageToQuestions(current_question_number, next_question_number, image_id) {
+  const animation = 'fade 3s infinite alternate';
+  transitionImageToQuestions(current_question_number, next_question_number, image_id, animation);
 }
 
 function buyBackpack() {
